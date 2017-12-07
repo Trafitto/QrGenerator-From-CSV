@@ -14,7 +14,9 @@ filenames = find_csv_filenames('Upload/')
 print ('Start creating qr-image')
 for fname in filenames:
 	csv=open(fname,'r')
+	
 	for line in csv:
 		col=line.split(';')
 		out=Create(col[0])
 		out.save('Image/'+col[0]+'.jpg')
+print('End')
